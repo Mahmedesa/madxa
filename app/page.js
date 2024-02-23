@@ -1,95 +1,91 @@
-import Image from "next/image";
-import styles from "./page.module.css";
+import ImageSlideshow from "@/components/images/image-slideshow";
+import Link from "next/link";
+import classes from "./page.module.css"
+import NewslatterSignup, {action as subscribeAction} from "@/components/subscibe/subscribe";
 
-export default function Home() {
-  return (
-    <main className={styles.main}>
-      <div className={styles.description}>
-        <p>
-          Get started by editing&nbsp;
-          <code className={styles.code}>app/page.js</code>
-        </p>
-        <div>
-          <a
-            href="https://vercel.com?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            By{" "}
-            <Image
-              src="/vercel.svg"
-              alt="Vercel Logo"
-              className={styles.vercelLogo}
-              width={100}
-              height={24}
-              priority
-            />
-          </a>
-        </div>
-      </div>
-
-      <div className={styles.center}>
-        <Image
-          className={styles.logo}
-          src="/next.svg"
-          alt="Next.js Logo"
-          width={180}
-          height={37}
-          priority
-        />
-      </div>
-
-      <div className={styles.grid}>
-        <a
-          href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className={styles.card}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2>
-            Docs <span>-&gt;</span>
-          </h2>
-          <p>Find in-depth information about Next.js features and API.</p>
-        </a>
-
-        <a
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className={styles.card}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2>
-            Learn <span>-&gt;</span>
-          </h2>
-          <p>Learn about Next.js in an interactive course with&nbsp;quizzes!</p>
-        </a>
-
-        <a
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className={styles.card}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2>
-            Templates <span>-&gt;</span>
-          </h2>
-          <p>Explore starter templates for Next.js.</p>
-        </a>
-
-        <a
-          href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className={styles.card}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2>
-            Deploy <span>-&gt;</span>
-          </h2>
+export default function HomePage(){
+  return(
+    <>
+      <header className={classes.header}>
+        <div className={classes.slideshow}>
+          <ImageSlideshow />
+        </div>        
+          <div className={classes.hero}>
+            <h1>Not just a care</h1>
+            <p>Health By hand , Care with another</p>
+          </div>
+      </header>
+      <main>
+        <section className={classes.section}>
+          <h2>How Madxa works?</h2>
           <p>
-            Instantly deploy your Next.js site to a shareable URL with Vercel.
+          CAre about your health all the time CAre about your health all the time 
+          CAre about your health all the time CAre about your health all the time
+          CAre about your health all the time
+          CAre about your health all the time CAre about your health all the time
           </p>
-        </a>
-      </div>
-    </main>
-  );
+          <p>
+            We can give you a spicial Medical services all the time at any place
+            We can give you a spicial Medical services all the time at any place
+            We can give you a spicial Medical services all the time at any place
+            We can give you a spicial Medical services all the time at any place 
+          </p>
+        </section>
+        <section className={classes.section}>
+          <h2>How it works</h2>
+          <p>
+          CAre about your health all the time CAre about your health all the time 
+          CAre about your health all the time CAre about your health all the time
+          CAre about your health all the time
+          CAre about your health all the time CAre about your health all the time
+          </p>
+          <p>
+            We can give you a spicial Medical services all the time at any place
+            We can give you a spicial Medical services all the time at any place
+            We can give you a spicial Medical services all the time at any place
+            We can give you a spicial Medical services all the time at any place 
+          </p>
+        </section>
+        <div className={classes.cta}>
+            <Link href="">
+              Conect Madxa
+              <p>012235668</p>
+            </Link>
+            <Link href="">
+              Connect Madxa
+              <p>www.madxa.net</p>
+            </Link>
+            <Link href="">
+              Connect Madxa
+              <p>visit us on</p>
+            </Link>
+        </div>
+        <div className={classes.domc}>
+          <div className={classes.connect}>
+            <h2>Subscribe our Email</h2>
+            <p>It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout</p>
+            <NewslatterSignup />
+          </div>
+          <div className={classes.compatators}>
+            <div className={classes.domcn}>
+              <p>
+                <img src="" alt="c1"/>
+              </p>
+              <p>
+                <img src="" alt="c2"/>
+              </p>
+            </div>
+            <div className={classes.domcn}>
+              <p>
+                <img src="" alt="c3"/>
+              </p>
+              <p>
+                <img src="" alt="c4"/>
+              </p>
+            </div>
+          </div>
+        </div>
+      </main>
+    </>
+  )
 }
